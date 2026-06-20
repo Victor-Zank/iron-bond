@@ -34,6 +34,14 @@ export default function Navbar({ isPublic = false }) {
         </div>
       ) : (
         <div className="navbar-right">
+          
+            href="https://tally.so/r/5BrLLN"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-accent btn-sm"
+          >
+            💬 Feedback
+          </a>
           <button className="notif-btn" aria-label="Notifications">
             🔔<span className="notif-dot" />
           </button>
@@ -44,14 +52,3 @@ export default function Navbar({ isPublic = false }) {
     </nav>
   );
 }
-
-{!isPublic && (
-  
-    href="https://tally.so/r/5BrLLN"
-    target="_blank"
-    rel="noreferrer"
-    className="btn btn-accent btn-sm"
-  >
-    💬 Feedback
-  </a>
-)}

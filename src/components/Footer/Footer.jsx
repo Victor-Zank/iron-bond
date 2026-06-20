@@ -10,12 +10,3 @@ export default function Footer() {
   );
 }
 
-<a 
-  href="https://tally.so/r/5BrLLN" 
-  target="_blank" 
-  rel="noreferrer"
-  className="btn btn-accent btn-sm"
-  style={{ marginTop: 12, display: 'inline-block' }}
->
-  💬 Give Feedback
-</a>
