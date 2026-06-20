@@ -43,6 +43,14 @@ export default function Navbar({ isPublic = false }) {
           <Link to="/about" className="nav-link">
             About
           </Link>
+          <a
+            href="https://tally.so/r/5BrLLN"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-accent btn-sm"
+          >
+            💬 Feedback
+          </a>
           <button className="btn btn-ghost btn-sm nav-ghost" onClick={() => navigate('/login')}>
             Log In
           </button>
