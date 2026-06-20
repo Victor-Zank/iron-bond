@@ -147,3 +147,6 @@ Requires `SUPABASE_SERVICE_KEY` in `.env`.
 **Victor Zank** — Full-Stack Developer  
 Ono Academic College — Web Development Course  
 GitHub: [@Victor-Zank](https://github.com/Victor-Zank)
+
+![ERD](./ERD1.png)
+![ERD](./ERD2.png)
