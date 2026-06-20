@@ -44,3 +44,14 @@ export default function Navbar({ isPublic = false }) {
     </nav>
   );
 }
+
+{!isPublic && (
+  
+    href="https://tally.so/r/5BrLLN"
+    target="_blank"
+    rel="noreferrer"
+    className="btn btn-accent btn-sm"
+  >
+    💬 Feedback
+  </a>
+)}
