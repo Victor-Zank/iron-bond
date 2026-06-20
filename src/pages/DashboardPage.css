@@ -1,0 +1,33 @@
+.dash-hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-lg); padding: 28px 32px;
+  margin-bottom: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  position: relative; overflow: hidden;
+}
+.dash-hero::after {
+  content: ''; position: absolute; right: -40px; top: -40px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: rgba(200,168,75,0.1); pointer-events: none;
+}
+.dash-greeting { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+.dash-name     { font-size: 36px; color: #fff; letter-spacing: 3px; }
+.dash-sub      { font-size: 13px; color: var(--accent); margin-top: 4px; }
+
+.dash-stats { display: flex; gap: 8px; }
+.stat-pill  { background: rgba(255,255,255,0.12); border-radius: var(--radius); padding: 12px 20px; text-align: center; }
+.stat-pill-num   { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: #fff; letter-spacing: 1px; line-height: 1; }
+.stat-pill-label { font-size: 11px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+.mini-avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.camp-card { border-color: var(--accent); background: linear-gradient(135deg,#FFFBEB,#fff); }
+
+@media (max-width: 640px) {
+  .dash-hero { flex-direction: column; gap: 16px; align-items: flex-start; }
+  .dash-stats { flex-wrap: wrap; }
+}

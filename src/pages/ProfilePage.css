@@ -1,0 +1,41 @@
+.profile-header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-lg); padding: 32px;
+  display: flex; align-items: center; gap: 24px; margin-bottom: 24px;
+}
+.profile-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--accent); color: var(--primary);
+  font-family: 'Bebas Neue', sans-serif; font-size: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid rgba(255,255,255,0.3); flex-shrink: 0;
+}
+.profile-name { font-size: 32px; color: #fff; letter-spacing: 2px; }
+
+.lb-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px; border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 8px;
+}
+.lb-row.me { background: #EAF2ED; border-color: var(--primary); }
+.lb-rank { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--muted); width: 30px; }
+.lb-rank.gold { color: var(--accent); }
+.lb-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.lb-avatar.me { background: var(--accent); color: var(--primary); }
+
+.activity-row {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 12px 0;
+}
+.act-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--border); margin-top: 4px; flex-shrink: 0;
+}
+.act-dot.active { background: var(--primary); }
+
+@media (max-width: 640px) { .profile-header { flex-direction: column; text-align: center; } }

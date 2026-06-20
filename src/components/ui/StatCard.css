@@ -1,0 +1,15 @@
+.stat-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 12px;
+  text-align: center; box-shadow: var(--shadow);
+}
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; color: var(--primary);
+  letter-spacing: 1px; line-height: 1;
+}
+.stat-num.accent { color: var(--accent); }
+.stat-label {
+  font-size: 11px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;
+}

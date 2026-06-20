@@ -1,0 +1,25 @@
+.values-tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 20px; flex-wrap: wrap; }
+.values-tab {
+  padding: 10px 20px; font-size: 13px; font-weight: 600; color: var(--muted);
+  border-bottom: 2px solid transparent; margin-bottom: -2px;
+  cursor: pointer; transition: all 0.15s;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.values-tab:hover { color: var(--text); }
+.values-tab.active { color: var(--primary); border-bottom-color: var(--accent); }
+
+.video-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+.video-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.video-thumb {
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; align-items: center; justify-content: center;
+}
+.play-circle {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  color: var(--primary); font-size: 14px; font-weight: 700;
+}
+.video-info { padding: 12px; }
+.video-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+.video-sub   { font-size: 11px; color: var(--muted); }

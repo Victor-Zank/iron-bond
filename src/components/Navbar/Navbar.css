@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--topbar);
+  background: var(--primary);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.navbar-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px; letter-spacing: 4px;
+  color: #fff; text-decoration: none;
+}
+.navbar-logo span { color: var(--accent); }
+.navbar-right { display: flex; align-items: center; gap: 16px; }
+.nav-link {
+  font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer; padding: 4px 8px;
+  border-radius: 4px; transition: all 0.15s;
+  text-decoration: none;
+}
+.nav-link:hover { color: #fff; background: rgba(255,255,255,0.1); }
+.nav-ghost { color: #fff !important; border-color: rgba(255,255,255,0.3) !important; }
+.notif-btn {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: none; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 16px; position: relative; color: #fff;
+}
+.notif-dot {
+  position: absolute; top: 6px; right: 6px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); border: 1.5px solid var(--primary);
+}
+.navbar-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--accent); color: var(--primary);
+  font-family: 'Bebas Neue', sans-serif; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: 2px solid rgba(255,255,255,0.2);
+}

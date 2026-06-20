@@ -1,0 +1,14 @@
+.auth-page {
+  margin-top: var(--topbar);
+  min-height: calc(100vh - var(--topbar));
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 24px;
+  background: var(--bg);
+}
+.auth-card { width: 100%; max-width: 440px; box-shadow: var(--shadow-lg) !important; }
+.auth-header { margin-bottom: 24px; }
+.forgot-link { text-align: right; margin-bottom: 20px; font-size: 13px; color: var(--muted); cursor: pointer; }
+.forgot-link span:hover { text-decoration: underline; }
+.auth-switch { text-align: center; margin-top: 12px; }
+.auth-link { color: var(--primary); font-weight: 600; cursor: pointer; }
+.auth-link:hover { text-decoration: underline; }

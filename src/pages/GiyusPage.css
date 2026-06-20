@@ -1,0 +1,30 @@
+.giyus-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.giyus-hero {
+  background: var(--primary); border-radius: var(--radius-lg);
+  padding: 24px 28px; margin-bottom: 12px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.giyus-step {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; background: var(--white);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: 10px; transition: all 0.15s;
+}
+.giyus-step:hover { border-color: var(--primary-light); }
+.giyus-step.done   { opacity: .6; }
+.giyus-step.active { border-color: var(--accent); background: #FFFBEB; }
+.step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--border); display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--muted); flex-shrink: 0;
+}
+.step-num.done   { background: var(--primary); color: #fff; }
+.step-num.active { background: var(--accent); color: var(--primary); }
+.step-title { font-size: 14px; font-weight: 600; }
+.step-sub   { font-size: 12px; color: var(--muted); }
+.dl-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 12px; border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 8px;
+}
+@media (max-width: 860px) { .giyus-layout { grid-template-columns: 1fr; } }
