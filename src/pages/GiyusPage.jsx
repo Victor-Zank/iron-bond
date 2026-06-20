@@ -12,7 +12,7 @@ export default function GiyusPage() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const { user: authUser, profile: authProfile, loading: authLoading } = useAuth();
+  const { user: authUser, loading: authLoading } = useAuth();
 
   useEffect(() => {
     async function fetchData() {

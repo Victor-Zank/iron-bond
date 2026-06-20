@@ -16,7 +16,25 @@ export default function TeamPage() {
   const [loading, setLoading] = useState(true);
   const messagesEndRef = useRef(null);
 
-  const { user: authUser, profile: authProfile, loading: authLoading } = useAuth();
+  const { user: authUser, loading: authLoading } = useAuth();
+
+  function scrollToBottom() {
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+
+  async function fetchMessages(teamId) {
+    const { data } = await supabase
+      .from('messages')
+      .select('*, profiles(full_name)')
+      .eq('team_id', teamId)
+      .order('created_at', { ascending: true })
+      .limit(50);
+
+    setMessages(data || []);
+    scrollToBottom();
+  }
 
   useEffect(() => {
     async function fetchData() {
@@ -44,17 +62,7 @@ export default function TeamPage() {
     if (!authLoading) fetchData();
   }, [authLoading, authUser]);
 
-  async function fetchMessages(teamId) {
-    const { data } = await supabase
-      .from('messages')
-      .select('*, profiles(full_name)')
-      .eq('team_id', teamId)
-      .order('created_at', { ascending: true })
-      .limit(50);
-
-    setMessages(data || []);
-    scrollToBottom();
-  }
+  
 
   async function handleTeamSelect(team) {
     setActiveTeam(team);
@@ -82,11 +90,7 @@ export default function TeamPage() {
     if (e.key === 'Enter') sendMessage();
   }
 
-  function scrollToBottom() {
-    setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  }
+  
 
   function getInitials(name) {
     if (!name) return '??';

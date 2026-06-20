@@ -13,10 +13,6 @@ export default function ValuesPage() {
   const [activeTab, setActiveTab] = useState('All');
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchVideos();
-  }, [activeTab]);
-
   async function fetchVideos() {
     setLoading(true);
 
@@ -35,6 +31,10 @@ export default function ValuesPage() {
     if (!error) setVideos(data || []);
     setLoading(false);
   }
+
+  useEffect(() => {
+    fetchVideos();
+  }, [activeTab]);
 
   return (
     <>

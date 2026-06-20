@@ -12,14 +12,7 @@
   color: #fff; text-decoration: none;
 }
 .navbar-logo span { color: var(--accent); }
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: nowrap;
-  overflow: visible;
-  white-space: nowrap;
-}
+.navbar-right { display: flex; align-items: center; gap: 16px; }
 .nav-link {
   font-size: 13px; font-weight: 500;
   color: rgba(255,255,255,0.65);

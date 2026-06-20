@@ -11,7 +11,7 @@ export default function ConfirmationPage() {
   const [user, setUser] = useState(null);
   const [registration, setRegistration] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { user: authUser, profile: authProfile, loading: authLoading } = useAuth();
+  const { user: authUser, loading: authLoading } = useAuth();
 
   useEffect(() => {
     async function fetchData() {

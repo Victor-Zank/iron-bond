@@ -78,7 +78,6 @@ export default function ProfilePage() {
     </>
   );
 
-  const isMe = (index) => leaderboard[index]?.user_id === user?.id;
   const myRank = leaderboard.findIndex(u => u.user_id === user?.id) + 1;
 
   return (

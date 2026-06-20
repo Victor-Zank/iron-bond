@@ -15,7 +15,7 @@ export default function PaymentPage() {
   const [error, setError] = useState(null);
   const [cardName, setCardName] = useState('');
 
-  const { user: authUser, profile: authProfile, loading: authLoading } = useAuth();
+  const { user: authUser, loading: authLoading } = useAuth();
 
   useEffect(() => {
     async function fetchData() {

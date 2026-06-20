@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Footer from '../components/Footer/Footer';
-import StatCard from '../components/ui/StatCard';
+// StatCard not used on this page
 import './DashboardPage.css';
 import { supabase } from '../lib/supabase';
 
@@ -90,6 +90,18 @@ export default function DashboardPage() {
 
     fetchData();
   }, [navigate]);
+
+  if (loading) return (
+    <>
+      <Navbar />
+      <div className="app-body">
+        <Sidebar />
+        <div className="main-content" style={{ display:'flex', alignItems:'center', justifyContent:'center', minHeight:200 }}>
+          <div style={{ color: 'white' }}>Loading...</div>
+        </div>
+      </div>
+    </>
+  );
 
   function formatCampDates(startDate, endDate) {
     if (!startDate) return '';
